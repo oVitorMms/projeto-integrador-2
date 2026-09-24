@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cria Sua Conta</title>
+  
+  <!-- Link para os ícones padrão (pode usar FontAwesome ou similar se preferir) -->
+  <link rel="stylesheet" href="https://cloudflare.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="login-container">
+    
+    <div class="painel-verde">
+      <h2>Bem - vindo de volta</h2>
+      <p>Acesse sua conta como: Cliente!</p>
+      <button class="btn-trocar" >Sou empresa!</button>
+    </div>
+
+    <div class="painel-formulario">
+      <h2>CRIA SUA CONTA</h2>
+      
+      <form>
+        <div class="input-group">
+          <input type="text" placeholder="CPF" id="inputDoCpf">
+        </div>
+
+        <div class="input-group">
+          <input type="text" placeholder="SENHA" id="inputDaSenha">
+        </div>
+
+        <button class="btn-cadastrar" onclick="puxarContas()">ENTRAR</button>
+        
+            <p class="nao-tem-conta">Não tem conta? Cadastre-se!</p>
+            <button class="btn-cadastrar" onclick="salvarConta()" >CADASTRAR</button>
+        
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
