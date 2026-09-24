@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; 
+}
+main{
+    width: 100vw;
+    height: 100vh;
+}
+#map{
+    width: 100vw;
+    height: 100vh;
+}
+.fullCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.areaDenuncia{
+    padding: 15px;
+    text-align: center;
+    background-color: #2ece5d; 
+    color: white;
+    border-radius: 15px;
+}
+.inputDeTextoSimples{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+.inputDeTextoSimples:focus{
+    outline: none;
+    box-shadow: 2px 2px black;
+    display: flex;
+    align-items: center;
+    background-color: #ebebeb;
+    border-radius: 4px;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+.coordenadas{
+    background-color: #2ece5d; 
+    margin: 4px;
+    padding: 4px;
+    border-radius: 15px;
+}
+.botaoSimples {
+ --color: #2ece5d; 
+ --color2: rgb(10, 25, 30);
+ padding: 0.8em 1.75em;
+ background-color: transparent;
+ border-radius: 6px;
+ border: .3px solid var(--color);
+ transition: .5s;
+ position: relative;
+ overflow: hidden;
+ cursor: pointer;
+ z-index: 1;
+ font-weight: 300;
+ font-size: 14px;
+ font-family: 'Roboto', 'Segoe UI', sans-serif;
+ text-transform: uppercase;
+ color: var(--color);
+}
+
+.botaoSimples::after, .botaoSimples::before {
+ content: '';
+ display: block;
+ height: 100%;
+ width: 100%;
+ transform: skew(90deg) translate(-50%, -50%);
+ position: absolute;
+ inset: 50%;
+ left: 25%;
+ z-index: -1;
+ transition: .5s ease-out;
+ background-color: var(--color);
+}
+
+.botaoSimples::before {
+ top: -50%;
+ left: -25%;
+ transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.botaoSimples:hover::before {
+ transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.botaoSimples:hover::after {
+ transform: skew(45deg) translate(-50%, -50%);
+}
+
+.botaoSimples:hover {
+ color: var(--color2);
+}
+
+.botaoSimples:active {
+ filter: brightness(.7);
+ transform: scale(.98);
+}
