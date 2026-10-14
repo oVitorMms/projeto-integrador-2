@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAção - Faça sua denúncia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <link rel="stylesheet" href="mapa.css">
+    <script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <button id="botaoLeftBar" class="btnLeftBar-open"><i class="fa-solid fa-arrow-right-long"></i></button>
+    <div id="leftbar" class="leftbar-closed">
+        <div class="navLeftBar">
+            <div class="tituloRightBar">
+                <img class="logo" src="../assets/logo.png" alt="Logo EcoAção">
+                <h1>EcoAção</h1>
+            </div>
+            <p>Juntos somos mais fortes!</p>
+        </div>
+        <div class="leftBarContent">
+            <ul class="itemDasLeftBar">
+                <li class="itemBar-atual"><i class="fa-solid fa-map-location-dot"></i>Mapa</li>
+                <li class="itemBar"><i class="fa-solid fa-triangle-exclamation"></i>Minhas denúncias</li>
+                <li class="itemBar"><i class="fa-solid fa-user"></i>Meu perfil</li>
+            </ul>
+        </div>
+    </div>
+
+<div id="rightbar" class="rightbar-closed">
+    <button id="botaoX" class="botaoX"><i class="fa-solid fa-xmark"></i></button>
+    <div class="navRightBar">
+        <div class="tituloRightBar">
+            <h1>Faça sua denúncia!</h1>
+        </div>
+        <p style="    color: wheat;">preencha as informações abaixo.</p>
+    </div>
+    <div class="rightBarContent">
+       <div class="denunciaTitulo">
+            <h2>Título da ocorrência <span class="vermelho">*</span> </h2>
+            <input class="inputSideBar" type="text" placeholder="Ex: Lixo acumulado">
+       </div>
+       <h2>Categoria <span class="vermelho">*</span></h2>
+       <div class="categoria">
+           <div id="dropdown" class="dropDown">
+           <button id="botaoDropDown">Selecione uma categoria  <i class="fa-solid fa-chevron-down"></i></button>
+                <ul id="dropDownContent" class="dropDownContent-closed">
+                    <li id="dropDownItem1" class="dropDownItem">Fogo.</li>
+                    <li id="dropDownItem2" class="dropDownItem" >Descarte irregular de resíduos.</li>
+                    <li id="dropDownItem3" class="dropDownItem" >Poluição da água.</li>
+                    <li id="dropDownItem4" class="dropDownItem" >Poluição da água.</li>
+                    <li id="dropDownItem5" class="dropDownItem" >Desmatamento e danos à vegetação.</li>
+                </ul>
+            </div>
+            
+       </div>
+       <div class="descricao">
+            <h2>Descrição <span class="vermelho">*</span></h2>
+            <input class="inputSideBarDesc" type="text" placeholder="Descreva oque está acontecendo...">
+       </div>
+
+       <div class="fotos">
+            <h2>Foto do local (Opcional)</h2>
+            <p>escolha uma foto.</p>
+            <input id="inputFoto" type="file" accept="image/*" capture="environment">
+            <img id="preview" src="aqui" alt="Sua foto aparecerá aqui" style="max-height: 100px;">
+       </div>
+         
+       <div class="localizacao">
+            <h2>Localização</h2>
+            <p>Ponto selecionado no mapa!</p>
+            <p id="coordenadasClicadas">0 | 0</p>
+       </div>
+       <div class="final">
+            <button><i class="fa-solid fa-paper-plane"></i> Enviar denúncia</button>
+       </div>
+    </div>
+</div>
+
+    <section>
+        <div class="pesquisa">
+          <i class="fa-solid fa-magnifying-glass"></i>  <input class="inputEndereco" type="text" placeholder="Buscar por endereço, bairro...">
+        </div>
+        <div id="map"></div>
+    </section>
+    
+    
+    
+
+    <script src="mapa.js"></script>
+</body>
+</html>
