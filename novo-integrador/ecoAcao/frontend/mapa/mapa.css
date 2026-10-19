@@ -225,5 +225,5 @@ body{
     cursor: pointer;
 }
 .fotos{
-    overflow-x: auto;
+    overflow-x: none;
 }

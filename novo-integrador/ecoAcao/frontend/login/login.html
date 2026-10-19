@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login EcoAção</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cria Sua Conta</title>
+  
+  <!-- Link para os ícones padrão (pode usar FontAwesome ou similar se preferir) -->
+  <link rel="stylesheet" hxref="https://cloudflare.com">
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <section>
-        <div class="imagemFundo">
-            <img src="../assets/forest-cartoon.webp" alt="Floresta de fundo" draggable="false">
+
+  <div class="login-container">
+    
+    <div class="painel-verde">
+      <h2>Bem - vindo de volta</h2>
+      <p>Acesse sua conta como: Cliente!</p>
+      <button class="btn-trocar" >Sou empresa!</button>
+    </div>
+
+    <div class="painel-formulario">
+      <h2>CRIA SUA CONTA</h2>
+      
+      <form>
+        <div class="input-group">
+          <input type="text" placeholder="CPF" id="inputDoCpf">
         </div>
-        <div class="main">
-            <img class="logo" src="../assets/logo.png" alt="Logo EcoAção" draggable="false">
-            <h1>Faça login na sua conta:</h1>
-            <p>Use suas credenciais para fazer login</p>
-            <div class="credenciais">
-                <div class="email">
-                    <input type="email" placeholder="EMAIL">
-                </div>
-                
-                <div class="senha">
-                    <input type="password" placeholder=" SENHA">
-                </div>
-                <button class="botaoLogin">Logar!</button>
-            </div>
-            <div class="areaRegistro">
-                <p>Não tem conta ainda? <a href="#" id="linkRegistro">Registre-se</a></p>
-            </div>
+
+        <div class="input-group">
+          <input type="password" placeholder="SENHA" id="inputDaSenha">
         </div>
-    </section>
+
+        <button class="btn-cadastrar"">ENTRAR</button>
+        
+            <p class="nao-tem-conta">Não tem conta? Cadastre-se!</p>
+            <button class="btn-cadastrar">CADASTRAR</button>
+        
+      </form>
+    </div>
+  </div>
+
 </body>
 </html>
